@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AO and DO</title>
+	<meta name="Viewport" content="width=device-width,initial scale=1.0">
+	<link rel="stylesheet" type="text/css" href="sorted array.css">
+</head>
+<body style="font-size: 20px;">
+	<div class="i">
+		<div class="h">
+			<h3><u>Sorting elements in Ascending order</h3></u>
+			To get the  sorted elements in ascending order we have to follow the rules what we  have discussed in earlier.i.e.,using function.
+			This function checks the values and take the sorted values by using return(x-y).<br>If the value of(x-y) is negative,then it takes the x element first. <br>If the value of(x-y) is positive,then it takes the y element first.<br>This function is called until it get sorted.<br>
+	   	 	For example,the array is <b>[2,10,63,3]</b></p>
+	    	<p>After using function,the sorted array in ascending order is</p>
+	    	<button onclick="so2()">To get sorting elements in Ascending form</button>
+	    	<p id="d1"></p>
+	    	<p id="d2"></p>
+			<p><b>Finding smallest element in ascending order:</b></p>
+			<p>The smallest element in this array is</p>
+			<button onclick="so3()">Smallest element</button>
+	    	<p id="d2"></p>
+			<p id="d"></p>
+			<p>The biggest element in this array is</p>
+			<button onclick="s()">biggest element</button>
+			<p id="d14"></p>
+			<script type="text/javascript">
+				var yy=[2,10,63,3];
+				function al5(){
+					alert("Press ok to get sorted elements in ascending order");
+					return "";
+				}
+				function so2(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('d1').innerHTML=yy;
+					document.getElementById('d2').innerHTML=al5();
+				}
+				function so3(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('d').innerHTML=yy[0];
+				}
+				function s(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('d14').innerHTML=yy[3];
+				}
+			</script>
+		</div>
+		<div class="j">
+			<h3><u>Sorting elements in Descending order</h3></u>
+			To get the  sorted elements in Descending order we have to use the function but instead of taking (<b>x-y)</b>,we have to take return<b>(y-x)</b>.
+			This function checks the values and take the sorted values by using return(y-x).<br>If the value of(y-x) is negative,then it takes the x element first. <br>If the value of(y-x) is positive,then it takes the y element first.<br>This function is called until it get sorted.<br>
+	   	 	For example,the array is <b>[2,10,63,3]</b></p>
+	    	<p>After using function,the sorted array in descending order is</p>
+			<button onclick="s2()">To get sorting elements in descending form</button>
+			<p id="demo11"></p>
+			<p><b>Finding smallest element in ascending order:</b></p>
+			<p>The smallest element in this array is</p>
+			<button onclick="sort2()">Smallest element</button>
+	    	<p id="demo12"></p>
+			<p id="demo"></p>
+			<p>The biggest element in this array is</p>
+			<button onclick="sort3()">biggest element</button>
+			<p id="demo14"></p>
+			<script type="text/javascript">
+				var yy=[2,10,63,3];
+				function alert6(){
+					alert("Press ok to get sorted elements in descending order");
+					return "";
+				}
+				function s2(){
+					yy.sort(function(x,y){
+						return y-x;
+					})
+					document.getElementById('demo11').innerHTML=yy;
+					document.getElementById('demo12').innerHTML=alert6();
+				}
+				function sort2(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('demo').innerHTML=yy[0];
+				}
+				function sort3(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('demo14').innerHTML=yy[3];
+				}
+			</script>
+		</div>
+	</div>
+
+</body>
+</html>

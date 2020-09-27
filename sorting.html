@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sorting</title>
+	<link rel="stylesheet" type="text/css" href="sorted array.css">
+	<meta name="Viewport" content="width=device-width,initial scale=1.0">
+</head>
+<body style="font-size: 20px;">
+	<div class="e">
+		<div class="d">
+			<p><u><b>Array in integer form</b></u></p>
+			<p>If the elements in the array is in integers,it will sort the elements by choosing the first value in the elements.<br>For example,the array is[2,10,63,3]<br>
+			Without using function,the sorted array is</p>
+			<p id="demo1"></p>
+			<script type="text/javascript">
+				var xx=[2,10,63,3];
+				document.getElementById('demo1').innerHTML=xx.sort();
+
+			</script>
+			<p><b><u>Explanation</u></b><br>Here,it is not sorted correctly because it is sorted by depending on the first value of all the elements so that it shows 10,2,3,63. To sort the elements,we have to use a function.This function checks the values and take the sorted values by using return(x-y).<br>If the value of(x-y) is negative,then it takes the x element first. <br>If the value of(x-y) is positive,then it takes the y element first.<br>This function is called until it get sorted.</p>
+		    <p>After using function,the sorted array is</p>
+			<button onclick="sort1() ">Get sorting elements</button>
+			<p id="demo2"></p>
+			<p id="demo3"></p>
+			<script type="text/javascript">
+				var yy=[2,10,63,3];
+				function alert1(){
+					alert("Press ok to get sorted elements");
+					return "";
+				}
+				function sort1(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('demo2').innerHTML=yy;
+					document.getElementById('demo3').innerHTML=alert1();
+				}
+				function sort2(){
+					yy.sort(function(x,y){
+						return x-y;
+					})
+					document.getElementById('demo2').innerHTML=yy[0];
+				}
+			</script>
+		</div>
+		<div class="f">
+			<P><b><u>Array in string form</b></P></u>
+            <p>If the array is in strings,it will choose the elements in alphabetical order.If the first letter is in caps but is backer than the next first element in alphabetical order,then also it will take the element which contains first letter in caps as first.If two elements have the first letter same,it checks for second letter.Based on this,it will be sorted.</p>
+            suppose,my array is <b>["Naira","anju","Anmol","karthik"]</b><br><br>
+			<button onclick="a1()">Get sorting elements</button>
+			<p id="demo4"></p>
+			<p id="demo5"></p>
+			<script type="text/javascript">
+				var xx=["Naira","anju","Anmol","karthik"];
+				function alert3(){
+					alert("press ok to get sorted elements.");
+					return "<p><u>Explanation:</u></p><p>Here,the elements <b>'Naira' and 'Anmol'</b> have capital letters first.so it will take the two elements first and checks the two elements by alphabetical order.After that,it chooses the remaining elements <b>'anju' and 'karthik'</b> and checks accordingly.</p>";
+				}
+				function a1(){
+					
+					document.getElementById('demo4').innerHTML=xx.sort();
+					document.getElementById('demo5').innerHTML=alert3();
+				}
+			</script>
+	</div>
+</body>
+</html>

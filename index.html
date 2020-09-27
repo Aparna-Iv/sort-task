@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sorting</title>
+	<link rel="stylesheet" type="text/css" href="sorted array.css">
+	<meta name="Viewport" content="width=device-width,initial scale=1.0">
+</head>
+<body style="font-size: 20px;">
+	<div class="a">
+		<div class="b">
+			<p style="text-align: center;font-size: 25px;"><u><b>Sorted Array Methods</b></p></u>
+			<p><u><b>Sorting elements in an array</b></u><br>
+			The sort() method is used to sort an array alphabetically whether the array is in strings and sort the array in numerically whether the array is in integers.</p>
+			<p style="text-align: center;"><a href="sorting.html"><button>More about Sorting<b>...</b></button></a></p>
+			<p><u><b>Reversing elements in an array</b></u></p>
+			<ph>This method is used to reverse the elements.
+			<p style="text-align: center;"><a href="reversing.html"><button>More about Reversing...</button></a></p>
+			<p><u><b>Ascending order in an array</b></u></p>
+			<p>All the elements in the array is sorted from smaller value to bigger value in the array</p>
+			<p style="text-align: center;"><a href="asc and dsc.html"><button>More about Ascending...</button></a></p>
+			<p><u><b>Descending order in an array</b></u></p>
+			<p>All the elements in the array is sorted from bigger value to smaller value in the array</p>
+			<p style="text-align: center;"><a href="asc and dsc.html"><button>More about descending...</button></a></p>
+		</div>
+		<div class="c">
+			<u><p style="text-align: center;font-size: 25px;"><b>Random Sorting</b></p></u>
+			<p><b><u>Explanation in detail:</u></b></p>
+			<p>This method is used to sort the array in random order.To sort the array in random,we have to use the function random_name(a,b) to get the return value which is in the range [-0.5,0.5].<br>it returns 0.5-Math.random() because this function return 0.5 - Math.random() and Math.random() will return the float value which is in range of [0,1]. it means that the sort order will be increase or decrease So that we get the result in random.</p>
+			<p>suppose my array is</p>
+			<p id=id1></p>
+			<p style="text-align: center;"><button onclick="random1()">To get random sort elements</button></p>
+			<p id="id2"></p>
+			<script type="text/javascript">
+				var ar1 = [42,64,36,52];
+				document.getElementById("id1").innerHTML = ar1;  
+				function random1() {
+  					ar1.sort(function(a, b){
+  						return 0.5 - Math.random();
+  					});
+ 					document.getElementById("id2").innerHTML = ar1;
+}
+			</script>
+		</div>
+	</div>
+	<div class="x" style="font-size: 20px;color:white;margin-left: 10%;"><i><p><b>S.Aparna/18691A0507/MITS1920WC11/Date of session:25/09/2020</p></b></u>
+	</div>
+</body>
+</html>
